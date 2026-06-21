@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>乐鱼体育 · 感受运动脉搏</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; }
+        body { background: #f4f5f7; color: #2e2f33; line-height: 1.6; }
+        .page { max-width: 1120px; margin: 0 auto; padding: 2rem 1.2rem; }
+
+        /* hero */
+        .hero { background: linear-gradient(145deg, #ffffff, #f9fafb); border-radius: 32px; padding: 3.5rem 2.5rem; margin-bottom: 2.8rem; box-shadow: 0 6px 18px rgba(0,0,0,0.04), 0 0 0 1px rgba(0,0,0,0.02); text-align: center; }
+        .hero h1 { font-size: 2.6rem; font-weight: 600; letter-spacing: -0.02em; color: #1c1d21; margin-bottom: 0.6rem; }
+        .hero h1 span { color: #2b6b4a; }
+        .hero p { font-size: 1.15rem; color: #4d4f57; max-width: 680px; margin: 0 auto 1.8rem; }
+        .hero .tagline { display: inline-block; background: #eef2f0; padding: 0.4rem 1.4rem; border-radius: 40px; font-size: 0.9rem; color: #2b5e43; border: 1px solid #d7dfda; }
+
+        /* 优势区 —— 卡片网格 */
+        .section-title { font-size: 1.6rem; font-weight: 500; margin-bottom: 1.8rem; letter-spacing: -0.01em; color: #1f2024; border-left: 5px solid #2b6b4a; padding-left: 1rem; }
+        .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; margin-bottom: 2.8rem; }
+        .card { background: #ffffff; border-radius: 24px; padding: 1.8rem 1.5rem; border: 1px solid #e6e8ec; box-shadow: 0 4px 12px rgba(0,0,0,0.02); transition: all 0.2s ease; }
+        .card:hover { border-color: #cbd5d1; box-shadow: 0 8px 24px rgba(0,0,0,0.05); }
+        .card .emoji { font-size: 2.2rem; display: block; margin-bottom: 0.6rem; }
+        .card h3 { font-size: 1.25rem; font-weight: 500; margin-bottom: 0.5rem; color: #1b1c20; }
+        .card p { color: #5a5c64; font-size: 0.95rem; }
+
+        /* 说明区（双栏卡片） */
+        .two-col { display: flex; gap: 1.8rem; margin-bottom: 2.8rem; flex-wrap: wrap; }
+        .two-col .col { flex: 1; min-width: 240px; background: #ffffff; border-radius: 24px; padding: 1.8rem 1.8rem; border: 1px solid #e6e8ec; box-shadow: 0 4px 12px rgba(0,0,0,0.02); }
+        .two-col .col h3 { font-size: 1.2rem; font-weight: 500; margin-bottom: 0.8rem; color: #1f2024; }
+        .two-col .col p { color: #51535b; font-size: 0.96rem; margin-bottom: 0.6rem; }
+        .two-col .col .meta { color: #78808a; font-size: 0.88rem; border-top: 1px solid #eceef2; padding-top: 0.7rem; margin-top: 0.8rem; }
+
+        /* FAQ 摘要 */
+        .faq-summary { background: #ffffff; border-radius: 24px; padding: 1.6rem 2rem; border: 1px solid #e6e8ec; box-shadow: 0 4px 12px rgba(0,0,0,0.02); margin-bottom: 2.2rem; }
+        .faq-summary h2 { font-size: 1.4rem; font-weight: 500; margin-bottom: 1.4rem; color: #1c1d21; }
+        .faq-item { padding: 0.8rem 0; border-bottom: 1px solid #f0f1f4; }
+        .faq-item:last-child { border-bottom: none; }
+        .faq-item .q { font-weight: 500; color: #26282e; margin-bottom: 0.2rem; }
+        .faq-item .a { color: #555860; font-size: 0.93rem; line-height: 1.5; }
+
+        /* 底部链接 */
+        .footer-link { background: #ffffff; border-radius: 40px; padding: 1.4rem 2rem; text-align: center; border: 1px solid #e2e5ea; box-shadow: 0 4px 8px rgba(0,0,0,0.02); }
+        .footer-link p { color: #3c3e45; font-size: 1rem; }
+        .footer-link a { color: #1f6e47; font-weight: 500; text-decoration: none; border-bottom: 1px dotted #94b7a6; transition: border 0.15s; }
+        .footer-link a:hover { border-bottom: 2px solid #1f6e47; }
+
+        /* 响应式 */
+        @media (max-width: 860px) {
+            .grid-3 { grid-template-columns: repeat(2, 1fr); }
+            .hero h1 { font-size: 2.2rem; }
+        }
+        @media (max-width: 580px) {
+            .grid-3 { grid-template-columns: 1fr; }
+            .hero { padding: 2.4rem 1.2rem; }
+            .hero h1 { font-size: 1.9rem; }
+            .two-col { flex-direction: column; }
+            .faq-summary { padding: 1.4rem; }
+        }
+    </style>
+</head>
+<body>
+<div class="page">
+
+    <!-- hero -->
+    <section class="hero">
+        <h1>与<span>乐鱼体育</span>一起，<br>感受竞技的温度</h1>
+        <p>在节奏飞快的日常里，运动是一道可以随时推开的光。从球场到屏幕，从数据到热爱——我们关注体育背后真实、生动的人与故事。</p>
+        <div class="tagline">⚡ 从赛事到生活 · 运动即连接</div>
+    </section>
+
+    <!-- 优势区 三卡片 -->
+    <h2 class="section-title">为什么聊体育，需要更开阔的视角</h2>
+    <div class="grid-3">
+        <div class="card">
+            <span class="emoji">🏀</span>
+            <h3>不止于胜负</h3>
+            <p>战术、数据、运动员成长线……体育的魅力藏在细节里。我们试着把每一场比赛解读成一段值得回味的叙事。</p>
+        </div>
+        <div class="card">
+            <span class="emoji">🏃</span>
+            <h3>社区与共鸣</h3>
+            <p>无论你主队是谁，热爱同一项运动的人总有共同语言。在交流中找到观点与温度，比看比分更有意思。</p>
+        </div>
+        <div class="card">
+            <span class="emoji">🧠</span>
+            <h3>视野与沉淀</h3>
+            <p>不追短平快的热梗，不盲从流量。我们相信冷静的分析、真诚的分享才是体育内容长久的内核。</p>
+        </div>
+    </div>
+
+    <!-- 说明区 双栏 -->
+    <div class="two-col">
+        <div class="col">
+            <h3>📌 从球场到生活场景</h3>
+            <p>体育从来不是孤立的存在：凌晨看球的咖啡、球场边的社区老店、下班后的一场野球——<strong>乐鱼体育</strong>试图捕捉这些真实片段，让赛事与日常相互滋养。</p>
+            <p>我们相信，好的体育内容不是高高在上的数据报告，而是能和你的生活产生共鸣的那一句“我也经历过”。</p>
+            <div class="meta">⚙️ 持续更新 · 真诚表达</div>
+        </div>
+        <div class="col">
+            <h3>📈 信息流之外，另一种选择</h3>
+            <p>当你刷到太多重复的快讯和情绪化标题时，或许可以换一个节奏：读一篇有温度的球队故事，了解一位运动员的赛场外坚持。</p>
+            <p>在<a href="https://app-main-leyu.com.cn">乐鱼体育</a>，我们不会用夸张的承诺吸引你，而是希望每一次阅读都带给你一点新的启发或纯粹的快乐。</p>
+        </div>
+    </div>
+
+    <!-- FAQ 摘要 -->
+    <div class="faq-summary">
+        <h2>❓ 关于我们，你可能想了解的</h2>
+        <div class="faq-item">
+            <div class="q">⚽ 乐鱼体育主要关注哪些体育项目？</div>
+            <div class="a">以足球、篮球为核心，同时涵盖网球、电竞、综合格斗等多项运动。我们看重内容的多元与深度，而不仅仅是热门联赛。</div>
+        </div>
+        <div class="faq-item">
+            <div class="q">🏆 内容更新频率如何？</div>
+            <div class="a">保持日常更新，重大赛事期间会有专题和实时视角解读。不求数量最多，但希望每篇都有可读价值。</div>
+        </div>
+        <div class="faq-item">
+            <div class="q">🤝 是否接受用户投稿或观点分享？</div>
+            <div class="a">欢迎真诚的交流。如果你有独到的球队观察、运动体验或深度分析，可以通过站内渠道与我们联系，我们乐于为真实的声音提供空间。</div>
+        </div>
+    </div>
+
+    <!-- 底部链接 -->
+    <div class="footer-link">
+        <p>探索更多关于比赛、训练与社区的故事，欢迎常来 <a href="https://app-main-leyu.com.cn">乐鱼体育</a> 坐坐。我们保持温和、开放，像一场好比赛一样值得期待。</p>
+    </div>
+
+</div>
+</body>
+</html>
